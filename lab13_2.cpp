@@ -22,7 +22,7 @@ int main(){
 void inputMatrix(double A[][N]){
 	for(int i=0;i< N;i++)
 	{
-		cout << "Row "<< i << ":";
+		cout << "Row "<< i+1 << ":";
 		cin >> A[i][0]>> A[i][1] >>  A[i][2] >>  A[i][3] >>  A[i][4];
 		
 	}
