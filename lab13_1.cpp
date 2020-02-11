@@ -8,10 +8,51 @@ void swap(T d[],int x,int y){
     d[x] = d[y];
     d[y] = temp;
 }
-
+/*void print(int d[]){
+    for (int i=0; i<10; i++)
+    {
+        cout << d[i] <<" " ;
+    }
+}*/
 template <typename T>
 void insertionSort(T d[],int N){
+	T max;
+	int loc;
 	
+	for (int i=1;i<N; i++){
+	   max= d[i];
+	   if(max <= d[i]){
+	       loc = i;
+	       for(int o = 0; o < 10; o++) 
+           {
+              if(o==i)cout << "[" <<d[o] <<"]"<< " "; 
+              else{
+                  cout << d[o] <<" ";
+              }
+           }
+	       cout << "=>"; 
+		
+        for(int j=i-1;j >= 0;j--)
+		{
+			if(d[j] < max)
+			{
+				swap(d,j,loc);				
+                loc=j;
+				//swap_flag = true;
+			}
+		}
+         	
+            for(int k = 0; k < 10; k++){
+                 {
+              if(k==loc)cout << "[" <<d[k] <<"]"<< " "; 
+              else{
+                  cout << d[k] <<" ";
+              }
+           }
+            }
+			cout << endl;   
+       }         
+	}
 //Write your code here.
 
 }
